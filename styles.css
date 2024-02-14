@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 3rem;
+}
+
+form p {
+    margin-bottom: 0.25rem;
+}
+
+form label {
+    font-size: 1.25rem;
+    color: darkgray;
+}
+
+form label:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+form input {
+    background-color: lightgray;
+    padding: 0.5rem;
+    border: 3px solid darkgray;
+    border-radius: 1rem;
+    color: gray;
+}
+
+form input:hover,
+form input:focus {
+    outline: 0;
+    border-color: gray;
+}
+
+form button {
+    background-color: darkgray;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: 100px;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 600;
+}
+
+form button:disabled {
+    background-color: gray;
+}
+
+form button:hover,
+form button:focus {
+    background-color: gray;
+    color: rgba(255, 255, 255, 0.85);
+    outline: 0;
+    cursor: pointer;
+}
+
+.btnCancel {
+    width: 50px;
+    margin-left: 0.25rem;
+}
+
+hr {
+    margin-block: 1rem;
+    width: 800px;
+    border: 2px solid darkgray;
+    border-radius: 1rem;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.contacts ul {
+    list-style: none;
+}
+
+.contacts li {
+    display: flex;
+    gap: 1rem;
+}
+
+.contacts li div {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.alert {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    display: none;
+    font-size: 0.8rem;
+    color: darkred;
+    border: 3px solid darkred;
+    border-radius: 1rem;
+    padding: 0.25rem;
+    padding-left: 1rem;
+}
+
+.btnContacts {
+    border: 0;
+    background-color: transparent;
+}
+
+.btnContacts:hover,
+.btnContacts:focus {
+    cursor: pointer;
+    outline: 0;
+}

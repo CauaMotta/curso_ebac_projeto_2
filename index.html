@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contatos</title>
+</head>
+
+<body>
+    <h1><i class="fa-solid fa-address-book"></i> Meus Contatos</h1>
+    <form>
+        <p>Adicionar um novo contato:</p>
+        <label for="name"><i class="fa-solid fa-user"></i></label>
+        <input id="name" type="text" placeholder="Digite um nome" required>
+        <label for="tel"><i class="fa-solid fa-phone"></i></label>
+        <input id="tel" type="tel" placeholder="99 9 99999999" pattern="[0-9]{2} [0-9]{1} [0-9]{8}" required>
+        <button type="submit">Cadastrar</button>
+        <p class="alert">Alert</p>
+    </form>
+    <hr>
+    <div class="contacts">
+        <p class="contacts-title">Contatos</p>
+        <ul>
+        </ul>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
