@@ -128,7 +128,7 @@ function nameValidate() {
 }
 
 function telValidate() {
-    const contactTel = tel.value.length == 13 || nome.value.length == 0;
+    const contactTel = tel.value.length == 15 || nome.value.length == 0;
 
     if (!contactTel) {
         alert.innerText = 'Telefone inválido, preencha seguindo o formato 99 9 99999999';
