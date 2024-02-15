@@ -87,21 +87,24 @@ hr {
 .contacts-title {
     font-size: 1.2rem;
     font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
-.contacts ul {
-    list-style: none;
-}
-
-.contacts li {
+.contacts table tbody tr {
     display: flex;
     gap: 1rem;
 }
 
-.contacts li div {
+.contacts table tbody tr td {
+    width: 200px;
     display: flex;
-    gap: 0.5rem;
     align-items: center;
+    gap: 0.25rem;
+}
+
+.btnTable {
+    gap: 0.5rem !important;
+    width: 50px !important;
 }
 
 .alert {

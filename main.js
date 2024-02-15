@@ -4,6 +4,7 @@ const tel = document.getElementById('tel');
 const btn = form.getElementsByTagName('button')[0];
 const alert = document.getElementsByClassName('alert')[0];
 const ul = document.getElementsByTagName('ul')[0];
+const table = document.getElementsByTagName('tbody')[0];
 const btnCancel = document.createElement('button');
 const contacts = JSON.parse(localStorage.getItem('contacts')) || [];
 let id;
@@ -52,17 +53,18 @@ function saveContact(name, tel, id) {
 }
 
 function addContact(contact) {
-    const li = document.createElement('li');
-    li.innerHTML = `
-                    <div>
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>
                         <i class="fa-solid fa-user"></i>
                         <p>${contact.name}</p>
-                    </div>
-                    <div>
+                    </td>
+                    <td>
                         <i class="fa-solid fa-phone"></i>
                         <p>${contact.tel}</p>
-                    </div>
-                    `;
+                    </td>`
+
+    const td = document.createElement('td');
+    td.setAttribute('class', 'btnTable')
 
     const btnEdit = document.createElement('button');
     btnEdit.setAttribute('class', 'btnContacts');
@@ -86,9 +88,11 @@ function addContact(contact) {
         deletContact(contact.id);
     });
 
-    li.appendChild(btnEdit);
-    li.appendChild(btnDelet);
-    ul.appendChild(li);
+    td.appendChild(btnEdit);
+    td.appendChild(btnDelet);
+
+    tr.appendChild(td);
+    table.appendChild(tr);
 }
 
 function editContact(name, tel, id) {
@@ -152,11 +156,11 @@ function generateId() {
 
 reload();
 function reload() {
-    const li = ul.getElementsByTagName('li');
+    const tr = table.getElementsByTagName('tr');
 
-    if (ul.children.length > 0) {
-        while (ul.children.length > 0) {
-            ul.removeChild(li[0]);
+    if (table.children.length > 0) {
+        while (table.children.length > 0) {
+            table.removeChild(tr[0]);
         }
     }
 
